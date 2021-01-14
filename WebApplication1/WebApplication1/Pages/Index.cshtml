@@ -1,10 +1,24 @@
 ﻿@page
-@model IndexModel
+@using WebApplication1.Data.Models
+@model IEnumerable<Cars>
+
 @{
     ViewData["Title"] = "Home page";
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Welcome1234</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>все авто</h2>
+    @{ 
+        foreach(var car in Model)
+        {
+            <div>
+                    <h2>модель @car.name</h2>
+                    <h3>@ViewBag.Category</h3>
+                    <p>цена @car.price.ToString("c")</p>
+                </div>
+        }
+    }
 </div>

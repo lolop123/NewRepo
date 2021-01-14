@@ -6,7 +6,7 @@ using WebApplication1.Data.Models;
 
 namespace WebApplication1.Data.Interfaces
 {
-    interface IAllCars
+   public  interface IAllCars
     {
         IEnumerable<Cars> cars { get; }
         IEnumerable<Cars> getFavCars { get; set; }
